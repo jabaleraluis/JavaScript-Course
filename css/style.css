@@ -1,0 +1,103 @@
+body {
+    background-color: #c0c0c0;
+}
+
+h1 {
+    text-shadow: 1px 1px 0 rgba(239, 218, 78, 1);
+}
+
+h1 i{
+    color: #efda4e;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+}
+
+p {
+    line-height: 1.25;
+}
+
+p span {
+    display: inline-block;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    color: #000;
+    background-color: #efda4e;
+    padding: 2.5px 5px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2.5px rgba(0, 0, 0, .25);
+    transition: color .3s ease, background-color .3s ease, box-shadow .3s ease;
+}
+
+p span:hover {
+    color: #efda4e;
+    background-color: #000;
+    box-shadow: 1px 1px 2.5px rgba(239, 218, 78, .25);
+}
+
+p .node {
+    padding: 1px 5px;
+    background-color: rgba(51, 153, 51, .25);
+    box-shadow: 2px 2px 0 rgba(51, 153, 51, 1),
+    -2px -2px 0 rgba(51, 153, 51, 1);
+    transition: box-shadow .3s ease;
+}
+
+p .node:hover {
+    box-shadow: 3px 3px 0 rgba(51, 153, 51, 1),
+    -3px -3px 0 rgba(51, 153, 51, 1);
+}
+
+p .apache {
+    padding: 1px 5px;
+    background-color: rgba(228, 37, 40, .25);
+    box-shadow: 2px 2px 0 rgba(228, 37, 40, 1),
+    -2px -2px 0 rgba(228, 37, 40, 1);
+    transition: box-shadow .3s ease;
+}
+
+p .apache:hover {
+    box-shadow: 3px 3px 0 rgba(228, 37, 40, 1),
+    -3px -3px 0 rgba(228, 37, 40, 1);
+}
+
+p .adobe {
+    padding: 1px 5px;
+    background-color: rgba(215, 22, 24, .25);
+    box-shadow: 2px 2px 0 rgba(215, 22, 24, 1),
+    -2px -2px 0 rgba(215, 22, 24, 1);
+    transition: box-shadow .3s ease;
+}
+
+p .adobe:hover {
+    box-shadow: 3px 3px 0 rgba(215, 22, 24, 1),
+    -3px -3px 0 rgba(215, 22, 24, 1);
+}
+
+p a {
+    display: inline-flex;
+    position: relative;
+    text-decoration: none;
+    transition: transform .3s ease, color .3s ease, text-shadow .3s ease;
+}
+
+p a::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #0000EE;
+    border-radius: 5px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+p a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+p a:active {
+    transform: scale(.95) translateX(-5px);
+    color: #0000EE;
+}
