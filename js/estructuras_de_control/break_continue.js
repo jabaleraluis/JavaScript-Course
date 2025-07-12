@@ -23,7 +23,18 @@ console.log("-------------------------------- ");
 
 for (let i = 0; i < numeros.length; i++) {
     if (i === 5) {
-        continue;                                   // -> 
+        continue;                                   // -> cuando se cumple la condición omite el valor y continua con el ciclo
     }
     console.log(numeros[i]);
+}
+
+console.log("-------------------------------- ");
+// Números impar
+
+for (let i = 0; i < numeros.length; i++) {
+    if (i % 2 === 1) {
+        console.log(`impar: ${i}`);
+        continue;
+    }
+    // console.log(numeros[i]);
 }
