@@ -55,7 +55,6 @@ function funcionDeclarada(){
 funcionDeclarada();   // -> Después de su declaración ✔
 
 // ? Función expresada 
-
 // funcionExpresada(); -> Antes de su declaración ✘
 // Función anónima = una función que no tiene nombre, y se la estámos asignando como valor a una variable
 const funcionExpresada = function() {     // -> Puede ser así
