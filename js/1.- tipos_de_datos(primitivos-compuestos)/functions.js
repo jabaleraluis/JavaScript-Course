@@ -63,5 +63,5 @@ const funcionExpresada = function() {     // -> Puede ser así
 funcionExpresada();   // -> Después de su declaración ✔
 
 const funcionExpresadaUnnamed = () => {   // -> Arrow function, también puede ser así
-
+  
 }

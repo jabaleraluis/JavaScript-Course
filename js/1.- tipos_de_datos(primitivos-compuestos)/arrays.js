@@ -28,6 +28,7 @@ console.log("----------------------- ");
 
 //Métodos de los arreglos
 const colores = ["Amarillo", "Verde", "Morado"];
+
 console.log(colores)
 colores.push("Negro");
 console.log(colores)
