@@ -23,6 +23,11 @@
       <a href="/inicio.html"><i class="ph ph-arrow-fat-left"></i>Volver...</a>
     </div>
 
-    <script src="/js/4.- Objetos y Funciones/8.- modules.js" type="module"></script>
+    
+    <!-- Tenemos que ponerle "type="module"" para que lo detecte como múdolo -->
+    <script src="/js/4.- Objetos y Funciones/8.- modules/modules.js" type="module"></script>
+
+    <!-- "nomodule" -> no lo carga hasta que el navegador no lo soporte y que tu navegador moderno no cargue dos veces el módulo -->
+    <script src="/js/4.- Objetos y Funciones/8.- modules/no-modules.js" nomodule></script>
   </body>
 </html>

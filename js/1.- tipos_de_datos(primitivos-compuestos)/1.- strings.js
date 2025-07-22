@@ -64,7 +64,7 @@ const miObjeto = {
 (miObjeto.sangre = "O+"), (miObjeto.joto = true), (miObjeto.edad = 15), (miObjeto.joto = false);
 console.log(miObjeto);
 
-var cualquierCadena = "Brave new wordl";
+var cualquierCadena = "Brave new world";
 
 document.write("<P>The index of the first w from the beginning is " + cualquierCadena.indexOf("w"));
 
@@ -120,12 +120,12 @@ console.log(c.toFixed(1)); //-> Cuántos decimales tendrá un valor numérico
 console.log(c.toFixed(2)); //-> Cuántos decimales tendrá un valor numérico
 console.log(c.toFixed(3)); //-> Cuántos decimales tendrá un valor numérico
 
-console.log(parseInt(c)); //-> Devuelve solo la parte entera
-console.log(parseFloat(c)); //-> Devuelve solo la parte flotante
-console.log(typeof c, typeof d); //-> De qué tipo son las variables
-console.log(c + d); //-> Concatena entero/string y los regresa en cadena
-console.log(c + parseInt(d)); //-> Transforma la cadena a entero
-console.log(c + parseFloat(d)); //-> Transforma la cadena a decimal
+console.log(parseInt(c));         //-> Devuelve solo la parte entera
+console.log(parseFloat(c));       //-> Devuelve solo la parte flotante
+console.log(typeof c, typeof d);  //-> De qué tipo son las variables
+console.log(c + d);               //-> Concatena entero/string y los regresa en cadena
+console.log(c + parseInt(d));     //-> Transforma la cadena a entero
+console.log(c + parseFloat(d));   //-> Transforma la cadena a decimal
 
 /* -----------------------CONVENCIONAL(BOOLEANOS)------------------------------ */
 console.log("-------- CONVENCIONAL(BOL) -------- ");

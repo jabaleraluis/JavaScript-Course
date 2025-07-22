@@ -6,6 +6,14 @@ var a = 5               // * -> Letra minúscula
 var $a = 5              // * -> Signo de peso
 var _a = 5              // * -> Guión bajo
 
+/* 
+> Ordenamiento de código
+# 1.- Importación de módulos
+# 2.- Declaración de variables
+# 3.- Declaración de funciones
+# 4.- Ejecución de código
+*/
+
 /*
 > Buenas prácticas
 #    Nombrar el archivo con _

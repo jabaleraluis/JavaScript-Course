@@ -7,7 +7,7 @@ html {
   background: linear-gradient(to top, rgba(44, 62, 80, 1) 0%, rgba(35, 38, 42, 1) 50%);
   height: 100%;
   padding: 0.5rem;
-  overflow: visible;
+  overflow: hidden;
 }
 
 h1 {
@@ -46,7 +46,7 @@ p span {
 
 p span:hover {
   color: #ecd835;
-  background-color: #21242a;
+  background-color: transparent;
   box-shadow: -3px -3px 0 #ecd835, 3px 3px 0 #ecd835;
 }
 
@@ -86,7 +86,7 @@ ul li a {
   text-decoration: none;
   position: relative;
   padding-left: 1rem;
-  transition: transform 0.3s ease;
+  transition: transform 0.6s ease;
 }
 
 ul li a::before {
@@ -99,15 +99,24 @@ ul li a::before {
 }
 
 ul li a:hover {
-  transform: translateX(4px);
+  transform: translateX(8px);
 }
 
 ul li a:active {
   transform: scale(0.95) translateX(4px);
+  transition-duration: 0.3s;
+}
+
+.info {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  text-align: start;
+  padding: 1rem;
 }
 
 .info a {
-  color: #0060e2;
+  color: #2196f3;
   display: inline-flex;
   position: relative;
   text-decoration: none;
@@ -121,7 +130,7 @@ ul li a:active {
   left: 50%;
   width: 0;
   height: 1px;
-  background-color: #0060e2;
+  background-color: #2196f3;
   border-radius: 5px;
   transition: width 0.3s ease, left 0.3s ease;
 }
