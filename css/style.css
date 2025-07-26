@@ -31,7 +31,7 @@ p {
   margin: 0;
 }
 
-p span {
+p .JavaScript {
   display: inline-block;
   font-weight: bold;
   font-style: italic;
@@ -44,21 +44,20 @@ p span {
   transition: color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-p span:hover {
+p .JavaScript:hover {
   color: #ecd835;
   background-color: transparent;
   box-shadow: -3px -3px 0 #ecd835, 3px 3px 0 #ecd835;
 }
 
 p .node {
-  cursor: default;
   padding: 1px 5px;
   box-shadow: 2px 2px 0 #66f800, -2px -2px 0 #66f800;
   transition: box-shadow 0.3s ease;
 }
 
 p .node:hover {
-  box-shadow: 3px 3px 0 #66f800, -3px -3px 0 #66f800;
+  box-shadow: 4px 4px 0 #66f800, -4px -4px 0 #66f800;
 }
 
 p .apnd {
@@ -68,16 +67,27 @@ p .apnd {
 }
 
 p .apnd:hover {
-  box-shadow: 3px 3px 0 #ff372b, -3px -3px 0 #ff372b;
+  box-shadow: 4px 4px 0 #ff372b, -4px -4px 0 #ff372b;
+}
+
+p .js {
+  position: relative;
+  display: inline-flex;
+  font-style: italic;
+}
+
+p .js::after{
+  content: "";
+  position: absolute;
+  bottom: 2.5px;
+  width: 100%;
+  height: 1px;
+  background-color: #ecd835;
 }
 
 ul {
   padding: 0 0 1rem 0;
   list-style: none;
-}
-
-ul li::marker {
-  color: #ecd835;
 }
 
 ul li a {

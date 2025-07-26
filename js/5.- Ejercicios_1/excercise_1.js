@@ -72,15 +72,18 @@ function excercise3(){
     console.log(`La cadena "${cadena2}" separada por "${separador}" queda de la siguiente manera: ${cadena2.split(separador)}`)
 }
 
-str1 = "Hola asdque tal",
-spl = "H";
+str1 = "Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre",
+spl = ",";
 
 const excercise3_1 = (str1 = "", spl = undefined) =>
     (!str1)
     ? console.warn("No ingresaste una cadena...")
     : (spl === undefined)
         ? console.log("Ingresa un separador...")
-    : console.log(`La cadena "${str1}" separada por "${spl}" queda de la siguiente manera: ${str1.split(spl)}`)
+    :   (
+        console.log(`La cadena "${str1}" separada por "${spl}" queda de la siguiente manera:`),
+        console.log(str1.split(spl))
+    );
 
 console.group("Ejercicio 3: ");
 excercise3();
@@ -94,7 +97,29 @@ function excercise4(){
     console.log(`La cadena "${cadena}" se repite "${repetir}" veces, y queda así: ${cadena.repeat(repetir)}`);
 }
 
+const excercise4_1 = (str = "", rep = undefined) =>
+    (!str)
+    ? console.warn("No ingresaste una cadena...")
+        : (rep === undefined)
+        ? console.warn("Ingresa la cantidad a repetir")
+    : console.log(`La cadena "${cadena}" se repite "${repetir}" veces, y queda así: ${cadena.repeat(repetir)}`);
+
+const excercise4_2 = (str = "", rep = undefined) => {
+    if(!str) return console.warn("No ingresaste un texto...");
+    if(rep===undefined) return console.warn("No ingresaste un número de veces...");
+    if(rep===0) return console.error("No puede ser 0...");
+    if(Math.sign(rep) === -1) return console.error("El número no puede ser negativo...");
+    console.log(`La cadena "${str}" se repite "${rep}" veces, y queda así: `);
+    for (let i = 1; i <= rep; i++){
+        console.log(`${i}.- ${str}`);
+    }
+}
+
 console.group("Ejercicio 4: ");
 excercise4();
+console.log("---------- Ejemplo 4.2: ----------")
+excercise4_1("Hola", 5);
+console.log("---------- Ejemplo 4.3: ----------")
+excercise4_2("Hola", 5);
 console.groupEnd();
 console.log("--------------------");
