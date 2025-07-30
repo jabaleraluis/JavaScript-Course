@@ -9,7 +9,7 @@ console.log("------- Classes & Inheritance ------- ");
 *       
 ¡       Constructor:
 *           El constructor de una clase es un método
-*           que se ejecuta en el momento de insanciar
+*           que se ejecuta en el momento de instanciar
 *           la clase.   */
 
 class Animal {

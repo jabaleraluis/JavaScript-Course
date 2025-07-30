@@ -62,7 +62,7 @@ const excercise18 = (cadena = "") => {
 }
 
 console.group("Ejercicio 18: ");
-excercise18("LOL");
+excercise18("Hola mundo");
 console.groupEnd();
 console.log("--------------------");
 
