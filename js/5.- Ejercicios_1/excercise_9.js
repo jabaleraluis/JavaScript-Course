@@ -46,6 +46,7 @@ class Pelicula {
         this.validarIMDB(idIMDB);
         this.validarTitulo(titulo);
         this.validarDirector(director);
+        this.validarYear(year);
     }
 
     validarCadenas(propiedad, valor) {
@@ -84,6 +85,31 @@ class Pelicula {
     validarDirector(director) {
         if (this.validarCadenas("Director", director)) {
             this.validarLongitudCadenas("Director", director, 50);
+        }
+    }
+
+    validarNumeros(propiedad, valor) {
+        if (!valor) return console.warn(`${propiedad} "${valor}" está vacío...`);
+        if (Math.sign(valor) === -1)
+            return console.warn(`${propiedad} "${valor}" NO puede ser negativo...`);
+        if (typeof valor !== "number")
+            return console.error(`${propiedad} "${valor}" ingresado NO es un número...`);
+
+        return true;
+    }
+
+    validarYear(year) {
+        if (this.validarNumeros("Año", year)) {
+            if (!/^([0-9]){4}$/.test(year))
+                return console.error(`El año "${year}" debe contener 4 dígitos...`);
+        }
+    }
+
+    validarArray(propiedad, valor) {
+        if (!valor || valor.length === 0) return console.warn(`${propiedad} "${valor} está vacío..."`);
+        if (!(valor instanceof Array)) return console.error(`${propiedad} "${valor} NO es un arreglo..."`);
+        for (let cadena of valor) {
+            if (typeof cadena !== "number") return console.error(`El valor de ${cadena}, NO es texto...`);
         }
     }
 
@@ -136,5 +162,6 @@ class Pelicula {
 const pelicula = new Pelicula({
     idIMDB: "tt1234567",
     titulo: "Luis Jabalera",
-    director: "Enrique Segoviano"
+    director: "Enrique Segoviano",
+    year: 2025
 });

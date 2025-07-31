@@ -76,7 +76,7 @@ p .js {
   font-style: italic;
 }
 
-p .js::after{
+p .js::after {
   content: "";
   position: absolute;
   bottom: 2.5px;
