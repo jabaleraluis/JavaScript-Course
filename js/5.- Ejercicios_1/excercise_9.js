@@ -11,15 +11,15 @@ Todos los datos del objeto son obligatorios.
 #   Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 7 restantes números.
 #   Valida que el título no rebase los 100 caracteres.
 #   Valida que el director no rebase los 50 caracteres.
-    #   Valida que el año de estreno sea un número entero de 4 dígitos.
-    #   Valida que el país o paises sea introducidos en forma de arreglo.
-    #   Valida que los géneros sean introducidos en forma de arreglo.
-    #   Valida que los géneros introducidos esten dentro de los géneros aceptados*.
-    #   Crea un método estático que devuelva los géneros aceptados*.
-    #   Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
-    #   Crea un método que devuelva toda la ficha técnica de la película.
-    #   Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de 
-    #   forma automatizada e imprime la ficha técnica de cada película.
+#   Valida que el año de estreno sea un número entero de 4 dígitos.
+#   Valida que el país o paises sea introducidos en forma de arreglo.
+#   Valida que los géneros sean introducidos en forma de arreglo.
+#   Valida que los géneros introducidos esten dentro de los géneros aceptados*.
+#   Crea un método estático que devuelva los géneros aceptados*.
+#   Valida que la calificación sea un número entre 0 y 10 pudiendo ser decimal de una posición.
+#   Crea un método que devuelva toda la ficha técnica de la película.
+#   Apartir de un arreglo con la información de 3 películas genera 3 instancias de la clase de 
+#   forma automatizada e imprime la ficha técnica de cada película.
 
 #   Géneros Aceptados:
 *   • Action        • Adult         • Adventure     • Animation     • Biography
@@ -34,12 +34,12 @@ Todos los datos del objeto son obligatorios.
     directorRegExp = /^[a-zA-ZÁÉÍÓÚáéíóúÜüÑñ.,'& ]/; */
 
 class Pelicula {
-    constructor({ idIMDB, titulo, director, year, paises, genre, rating }) {
+    constructor({ idIMDB, titulo, director, year, pais, genre, rating }) {
         this.idIMDB = idIMDB;
         this.titulo = titulo;
         this.director = director;
         this.year = year;
-        this.paises = paises;
+        this.pais = pais;
         this.genre = genre;
         this.rating = rating;
 
@@ -47,6 +47,20 @@ class Pelicula {
         this.validarTitulo(titulo);
         this.validarDirector(director);
         this.validarYear(year);
+        this.validarPais(pais);
+        this.validarGeneros(genre);
+        this.validarRating(rating);
+    }
+
+    static get listaGeneros(){
+        return ["Action", "Adult", "Adventure", "Animation", "Biography", "Comedy", "Crime",
+        "Documentary", "Drama", "Family", "Fantasy", "Film Noir", "Game-Show", "History", "Horror",
+        "Musical", "Music", "Mystery", "News", "Reality-TV", "Romance", "Sci-Fi", "Short", "Sport",
+        "Talk-Show", "Thriller", "War", "Western"];
+    }
+
+    static generosAceptados() {
+        return console.log(`Los géneros aceptados son: \n${Pelicula.listaGeneros.join("\n")}`);
     }
 
     validarCadenas(propiedad, valor) {
@@ -106,11 +120,41 @@ class Pelicula {
     }
 
     validarArray(propiedad, valor) {
-        if (!valor || valor.length === 0) return console.warn(`${propiedad} "${valor} está vacío..."`);
-        if (!(valor instanceof Array)) return console.error(`${propiedad} "${valor} NO es un arreglo..."`);
+        if (!valor || valor.length === 0) return console.warn(`${propiedad} "${valor}" está vacío...`);
+        if (!(valor instanceof Array)) return console.error(`${propiedad} "${valor}" NO es un arreglo...`);
         for (let cadena of valor) {
-            if (typeof cadena !== "number") return console.error(`El valor de ${cadena}, NO es texto...`);
+            if (typeof cadena !== "string") return console.error(`El valor de "${cadena}", NO es texto...`);
         }
+
+        return true;
+    }
+
+    validarPais(pais) {
+        this.validarArray("País", pais);
+    }
+
+    validarGeneros(genre) {
+        if (this.validarArray("Géneros", genre)) {
+            for (let g of genre) {
+                if (!Pelicula.listaGeneros.includes(g)) {
+                    console.error(`Género(s) "${g}" no encontrado...`);
+                    console.log(`Géneros aceptados: `)
+                    Pelicula.generosAceptados();
+                }
+            }
+        }
+    }
+
+    validarRating(rating) {
+        if (this.validarNumeros("Calificación", rating)) {
+            return (rating < 0 || rating > 10) 
+                ? console.error(`La calificación "${rating}" debe ser entre 0 y 10`)
+                : this.rating = rating.toFixed(1);
+        }
+    }
+
+    fichaTecnica(){
+        console.log(`Ficha Técnica:\nIMDB ID: "${this.idIMDB}"\nTítulo: ${this.titulo}\nDirector: ${this.director}\nAño: ${this.year}\nPaís: "${this.pais.join(" | ")}"\nGénero(s): "${this.genre.join(" | ")}"\nCalificación: ${this.rating}`)
     }
 
     /* validacion() {
@@ -158,10 +202,48 @@ class Pelicula {
 } catch (error) {
     console.error(error.message);
 } */
+// Pelicula.generosAceptados();
 
-const pelicula = new Pelicula({
+/* const pelicula = new Pelicula({
     idIMDB: "tt1234567",
-    titulo: "Luis Jabalera",
+    titulo: "La Toalla del Mojado",
     director: "Enrique Segoviano",
-    year: 2025
-});
+    year: 2025,
+    pais: ["México", "Francia"],
+    genre: ["Adult", "Horror"],
+    rating: 9.5863,
+});*/
+
+// misPelis.fichaTecnica(); 
+
+const misPelis = [
+    {
+    idIMDB: "tt1234567",
+    titulo: "La Toalla del Mojado",
+    director: "Enrique Segoviano",
+    year: 2025,
+    pais: ["México", "Francia"],
+    genre: ["Adult", "Horror"],
+    rating: 9.5863,
+    },
+    {
+    idIMDB: "tt1234567",
+    titulo: "La qefqef del Mojado",
+    director: "Enrique Segoviano",
+    year: 2025,
+    pais: ["México", "Francia"],
+    genre: ["Adult", "Horror"],
+    rating: 9.5863,
+    },
+    {
+    idIMDB: "tt1234567",
+    titulo: "La Tofefa del Mojado",
+    director: "Enrique Segoviano",
+    year: 2025,
+    pais: ["México", "Francia"],
+    genre: ["Adult", "Horror"],
+    rating: 9.5863,
+    }
+];
+
+misPelis.forEach(el => new Pelicula(el).fichaTecnica());

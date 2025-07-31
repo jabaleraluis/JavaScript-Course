@@ -21,13 +21,13 @@ var _a = 5              // * -> Guión bajo
 
 // > UpperCamelCase
 // #    CLASES:
-        class serHumano{
+        class SerHumano{
             constructor (nombre, genero) {
                 this.nombre = nombre
                 this.genero = genero
             }
 
-            miNombreEs (){
+            MiNombreEs (){
                 return 'Mi nombre es ${this.nombre}'
             }
         }
@@ -52,7 +52,7 @@ var _a = 5              // * -> Guión bajo
 /*  
 > Palabras reservadas
 #    A: abstract
-#   B: boolean, break, byte
+#    B: boolean, break, byte
 #    C: case, catch, char, class, const, continue
 #    D: debugger, default, delete, do, double
 #    E: else, enum, export, extends
