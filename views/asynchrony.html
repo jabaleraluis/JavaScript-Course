@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link rel="icon" href="/image/JavaScript-fill.ico" type="image/x-icon" />
+    <title>Asincronía</title>
+</head>
+<body>
+    <h1>Asincronía <i class="bi bi-javascript"></i></h1>
+
+    <h2>¿Qué es la asincronía en JavaScript?</h2>
+    <p>Es una técnica que permite a tu programa iniciar una tarea de larga duración y 
+    seguir respondiendo a otros eventos mientras esa tarea se ejecuta, en lugar de 
+    tener que esperar hasta que esa tarea haya terminado. Una vez que dicha tarea ha
+    finalizado, tu programa presenta el resultado.</p>
+
+    <pre>
+        <code class="language-javascript">console.log("Hola");
+
+setTimeout(function() {
+    console.log("Adiós");
+}, 2000);
+
+console.log("Hola de nuevo");</code>
+    </pre>
+
+    <p>
+        En este caso, "Hola" y "Hola de nuevo" se imprimirán inmediatamente, 
+        y "Adiós" se imprimirá después de 2 segundos, mostrando que la ejecución
+        continúa mientras se espera. 
+    </p>
+
+    <div class="backwards">
+      <a href="/inicio.html"><i class="ph ph-arrow-fat-left"></i>Volver...</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/js/6.- Programación Asíncrona/2.- asynchrony_&_event_loop.js"></script>
+    
+</body>
+</html>

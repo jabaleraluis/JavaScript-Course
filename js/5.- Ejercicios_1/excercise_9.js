@@ -227,13 +227,13 @@ const misPelis = [
     rating: 9.5863,
     },
     {
-    idIMDB: "tt1234567",
+    idIMDB: "tt5245245",
     titulo: "La qefqef del Mojado",
     director: "Enrique Segoviano",
     year: 2025,
     pais: ["México", "Francia"],
     genre: ["Adult", "Horror"],
-    rating: 9.5863,
+    rating: 2.34,
     },
     {
     idIMDB: "tt1234567",
