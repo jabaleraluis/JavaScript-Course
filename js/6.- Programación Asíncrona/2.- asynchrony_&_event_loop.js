@@ -18,7 +18,7 @@ console.log("------- Asincronía y Event Loop ------- ");
 ¡       • Operaciones de CPU y Operaciones I / O:
 ¡           - Operaciones CPU:
 *               Son aquellas que pasan el mayor tiempo consumiento procesos
-*               del CPU, ej. la escritura de ficheros.
+*               del CPU, ej. la escritura de ficheros (loops).
 ¡           - Operaciones de Entrada y Salida:
 *               Son aquellas que pasan la mayor parte del tiempo esperando
 *               la respuesta de una petición o recurso, como la solicitud
