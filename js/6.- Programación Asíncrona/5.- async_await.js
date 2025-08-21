@@ -6,8 +6,7 @@ console.log("------- Async / Await ------- ");
 > Async / Await
 #   ¿Qué son el Async y Await?
 *       Van a esperar que la condición se cumplan, para seguir
-*       ejecutando el proceso.
-#           */
+*       ejecutando el proceso.  */
 
 function cuadradoPromise(value) {
   if (typeof value !== "number") {

@@ -15,6 +15,26 @@ function cuadradoCallback(value, callback) {
   }, 0 | (Math.random() * 1000));
 }
 
+function miFuncion(n, c) {
+  if(typeof n !== "number") {
+    console.error("No es un número")
+  }
+  if (n % 2 === 0) {
+    c(true)
+  } else {
+    c(false)
+  }
+}
+
+miFuncion("24", (par) => {
+  if (par) {
+    console.log("Es par")
+  }
+  else {
+    console.log("Es impar")
+  }
+})
+
 //! CALLBACK HELL
 cuadradoCallback(0, (value, result) => {
   console.log("Inicia callback");

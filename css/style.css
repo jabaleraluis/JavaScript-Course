@@ -3,6 +3,7 @@
 :root {
   --header: 2rem;
   --subheader: 1.25rem;
+  --sub: 1rem;
   --text_body: 0.9rem;
 }
 
@@ -36,8 +37,21 @@ h2 {
   font-weight: 600;
   line-height: 1.2;
   margin: 0;
-  padding: 0 0 0.5rem 0;
+  padding: 0.5rem 0;
   color: #e0e0e0;
+}
+
+h3 {
+  font-size: var(--sub);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+  padding: .5rem 0 0 0;
+  color: #e0e0e0;
+  text-decoration: underline;
+  text-decoration-color: #ecd835;
+  text-decoration-thickness: 1.5px;
+  /* text-decoration-style: wavy; */
 }
 
 p {
@@ -45,6 +59,7 @@ p {
   color: #e0e0e0;
   text-align: justify;
   margin: 0;
+  line-height: 1.5;
 }
 
 p .JavaScript {
@@ -54,6 +69,7 @@ p .JavaScript {
   text-decoration: underline;
   color: #000;
   background-color: #ecd835;
+  text-decoration-thickness: 1.5px;
   padding: 2.5px 5px;
   border-radius: 4px;
   box-shadow: 1px 1px 2.5px rgba(0, 0, 0, 0.25);
@@ -66,39 +82,20 @@ p .JavaScript:hover {
   box-shadow: -3px -3px 0 #ecd835, 3px 3px 0 #ecd835;
 }
 
-p .node {
-  padding: 1px 5px;
-  box-shadow: 2px 2px 0 #66f800, -2px -2px 0 #66f800;
-  transition: box-shadow 0.3s ease;
+p .node,
+p .apnd {
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
 }
 
-p .node:hover {
-  box-shadow: 4px 4px 0 #66f800, -4px -4px 0 #66f800;
+p .node {
+  text-decoration-color: #66f800;
 }
 
 p .apnd {
-  padding: 1px 5px;
-  box-shadow: 2px 2px 0 #ff372b, -2px -2px 0 #ff372b;
-  transition: box-shadow 0.3s ease;
-}
-
-p .apnd:hover {
-  box-shadow: 4px 4px 0 #ff372b, -4px -4px 0 #ff372b;
-}
-
-p .js {
-  position: relative;
-  display: inline-flex;
-  font-style: italic;
-}
-
-p .js::after {
-  content: "";
-  position: absolute;
-  bottom: 2.5px;
-  width: 100%;
-  height: 1px;
-  background-color: #ecd835;
+  text-decoration-color: #ff372b;
 }
 
 ul {
@@ -123,7 +120,7 @@ ul li a::before {
   content: "•";
   position: absolute;
   left: 0;
-  top: -4px;
+  top: -6px;
   color: #ecd835;
   font-size: 1.5rem;
 }
@@ -178,6 +175,7 @@ ul li a:active {
 .backwards a {
   display: inline-flex;
   color: #ecd835;
+  margin: 1rem 0 0 0;
   padding: 1rem 0;
   line-height: 1;
   text-decoration: none;
