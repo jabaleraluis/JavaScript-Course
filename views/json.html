@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <link rel="icon" href="/image/JavaScript-fill.ico" type="image/x-icon" />
+    <title>JSON | JavaScript</title>
+</head>
+<body>
+    <h1>JSON: JavaScript Object Notation <i class="bi bi-javascript"></i></h1>
+
+    <h2>¿Qué es 'JSON' en JavaScript?</h2>
+    <p>Es un formato basado en texto estándar para representar datos estructurados en la sintaxis de objetos de JavaScript.
+    Es comúnmente utilizado para transmitir datos en aplicaciones web.
+    <br>
+    Por ejemplo: enviar algunos datos desde el
+    servidor al cliente, así estos datos pueden ser mostrados en páginas web, o viceversa.
+    </p>
+    <br>
+    <p>Un archivo JSON suele contener mucha información almacenada, ej. sintaxis:</p>
+    
+<pre><code class="obdisian language-json">{
+  "string": "Luis",
+  "number": 25,
+  "boolean": true,
+  "array": ["programar", "jugar"],
+  "object": {
+    "instagram": "@jabalera_luis",
+    "email": "jabaleraluisangel@gmail.com"
+  },
+  "null": null
+}</code></pre>
+
+    <p>Sin embargo, su contenido puede ser simplemente un <i>Array</i>, un <i>Number</i>, un <i>String</i>, un <i>Boolean</i> o incluso un <i>Null</i>, lo más habitual es que
+    parta siendo un <strong>Object</strong> o un <strong>Array</strong>.</p><br>
+    
+    <h2>Métodos de JSON</h2>
+    <h3>JSON.parse()</h3>
+    <p>Analiza una cadena de texto y lo convierte a un objeto válido para JavaScript.</p>
+    <br>
+    <h3>JSON.stringify()</h3>
+    <p>Hace lo contrario a 'parse', analiza un objeto o un valor válido para JavaSript y lo convierte a <u>cadena de texto</u>.</p>
+
+    <div class="backwards">
+      <a href="/index.html"><i class="ph ph-arrow-fat-left"></i>Volver...</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script src="/js/9.- JSON/json.js"></script>
+</body>
+</html>

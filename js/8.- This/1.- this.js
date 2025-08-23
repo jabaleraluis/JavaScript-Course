@@ -13,7 +13,7 @@ console.log(this);
 console.log(window);
 console.log(this === window);
 
-this.nombre = "Contexto Global";
+this.nombre = "Contexto Global";                    // -> Es una variable global, en el window
 console.log(this.nombre);
 
 function imprimir() {
@@ -32,14 +32,12 @@ const obj = {
         console.log(this.nombre);                   // -> Contexto objeto
     }
 }
-
 obj.imprimir();
 
 const obj2 = {
     nombre: "Contexto Objeto 2",
     imprimir                                        // -> imprimir: imprimir = 'this', hace referencia al contexto de bloque
 }
-
 obj2.imprimir();
 
 const obj3 = {
@@ -48,18 +46,17 @@ const obj3 = {
         console.log(this.nombre);                   // -> Enlaza el contexto padre al hijo
     }
 }
-
 obj3.imprimir();
 
 function Persona(nombre) {
     this.nombre = nombre
 
     // return console.log(this.nombre);
-    // return function() {                          // -> Global porque crea un nuevo contexto, y no tiene propiedad nombre, por eso lo agarra del contexto global
+    // return function() {                          // -> Global porque crea un nuevo contexto, y no tiene propiedad nombre, se regresa y por eso agarra el contexto global
     //     console.log(this.nombre);
     // }
 
-    return () => console.log(this.nombre);        // -> Output - 'Luis' porque hereda el contexto del padre
+    return () => console.log(this.nombre);          // -> Output - 'Luis' porque hereda el contexto del padre
 }
 
 let luis = new Persona("Luis");

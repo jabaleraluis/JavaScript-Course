@@ -1,0 +1,11 @@
+{
+  "string": "Luis",
+  "number": 25,
+  "boolean": true,
+  "array": ["programar", "jugar"],
+  "object": {
+    "instagram": "@jabalera_luis",
+    "email": "jabaleraluisangel@gmail.com"
+  },
+  "null": null
+}

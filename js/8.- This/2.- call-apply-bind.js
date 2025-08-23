@@ -9,9 +9,7 @@ console.log("------- call, apply, bind -------");
 *       particular y utilizarlo en una invocación nos sirven 
 *       los métodos call, apply, bind.  */
 
-46488
-
-console.log(this);
+// console.log(this);
 this.lugar = "Contexto Global"
 
 function saludar(saludo, aQuien) {
@@ -27,7 +25,7 @@ const obj = {
 saludar.call(obj, "Hola", "Luis");                          // -> Recibe el parámetro el cual será el 'contexto'
 saludar.call(null, "Hola", "Luis");                         // -> Si tiene 'null' se regresa al contexto global
 saludar.call(this, "Hola", "Luis");                         // -> Como estamos en el contexto global, hace referencia a tal, si estuvieramos dentro de una función referenciaría a la función
-
+console.log("---------- apply ------------")
 saludar.apply(obj, ["Adiós", "Luis"]);                      // -> Funciona igual pero si queremos pasar más parámetros se usa con '[]'
 saludar.apply(null, ["Adiós", "Luis"]);
 saludar.apply(this, ["Adiós", "Luis"]);
@@ -45,7 +43,8 @@ const persona = {
 persona.saludar();
 
 const otraPersona = {
-    saludar: persona.saludar.bind(this)              // -> 'bind' enlaza el contexto del parámetro que le pasas
+    // saludar: persona.saludar.bind(persona)           // -> Enlaza el contexto de la 'persona' y recibe los mismos atributos
+    saludar: persona.saludar.bind(this)                 // -> 'bind' enlaza el contexto del parámetro que le pasas
 }
 
 otraPersona.saludar();
