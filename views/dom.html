@@ -12,6 +12,7 @@
     <link rel="icon" href="/image/JavaScript-fill.ico" type="image/x-icon" />
     <title>DOM | JavaScript</title>
 </head>
+
 <body>
     <div class="DOM">
         <!-- <h1>DOM: Document Object Model <i class="bi bi-javascript"></i></h1>
@@ -64,7 +65,7 @@
     </nav>
     <input type="text" name="nombre" placeholder="Nombre">
     <a class="link-dom" href="dom.html" style="background-color: #F7DF1E; color: #222;" data-id="1" data-description="Document Object Model">DOM</a>
-    <section class="cards">
+    <!-- <section class="cards">
         <figure class="card">
             <img src="https://picsum.photos/id/2/200/200" alt="Tech">
             <figcaption>Tech</figcaption>
@@ -85,12 +86,49 @@
             <img src="https://picsum.photos/id/18/200/200" alt="Nature">
             <figcaption>Nature</figcaption>
         </figure>
-    </section>
+    </section> -->
+
+    <template id="template-cards">
+        <figure class="card">
+            <img>
+            <figcaption></figcaption>
+        </figure>
+    </template>
+
+    <h3>Eventos en JavaScript</h3>
+    <h3>Manejadores de Eventos</h3>
+    <!-- <button onclick="alert(`Hola Mundo`)">Evento con atributo HTML</button> -->
+    <button onclick="holaMundo()">Evento con atributo HTML</button> <br><br>
+    <button id="evento-semantico">Evento con manejador semántico</button> <br><br>
+    <button id="evento-multiple">Evento con manejador múltiple</button> <br><br>
+    <button id="evento-remover">Removiendo eventos con manejadores múltiples</button> <br><br>
     
+    <h4>Flujo de Eventos</h4>
+    <section class="eventos-flujo">
+        <div class="uno">
+            1
+            <div class="dos">
+                2
+                <div class="tres">
+                    3
+                    <a href="https://developer.mozilla.org/" target="_blank" rel="noreferrer">MDN</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h3 style="width: 2000px;">Manejo del BOM</h3>
+    <button id="abrir-ventana">Abrir Ventana</button>
+    <br><br>
+    <button id="cerrar-ventana">Cerrar Ventana</button>
+    <br><br>
+    <button id="imprimir-ventana">Imprimir Ventana</button>
+    <br><br>
+
     <div class="backwards">
       <a href="/index.html"><i class="ph ph-arrow-fat-left"></i>Volver...</a>
     </div>
-
-    <script src="/js/10.- DOM/5.- css.js"></script>
+    
+    <script src="/js/10.- DOM/19.- bom_objects.js"></script>
 </body>
 </html>

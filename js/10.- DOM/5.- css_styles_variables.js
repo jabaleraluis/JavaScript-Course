@@ -35,12 +35,20 @@ $linkDOM.style.borderRadius = ".5rem";
 const $html = document.documentElement,
     $body = document.body;
 
-let varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color");
-let varYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color");
-
+let varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color"),
+varYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color");
+/* 
 console.log(varDarkColor, varYellowColor);
 
 $body.style.backgroundColor = varDarkColor;
 $body.style.color = varYellowColor;
 
-$html.style.setProperty("--dark-color", "pink");
+$html.style.setProperty("--dark-color", "#181818");                                // -> Se le asigna la nueva propiedad
+varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color");        // -> Actualizar en la variable el nuevo color
+
+$body.style.setProperty("background-color", varDarkColor); */
+
+let color = getComputedStyle($body).getPropertyValue("--dark-color");
+
+$body.style.setProperty("--dark-color", "#181818")
+$body.style.setProperty("background-color", color);
